@@ -25,7 +25,7 @@ def download_file(url: str, file_name :str):
         f.write(r.content)
 
 def check_file(url: str, error_mode :dict):
-    for id in range(1, 50000):
+    for id in range(1, 2000):
         for file in files:
             r = requests.get(url + f"/proc/{id}/{file}")
             if error_mode['mode'] == "status_code":
